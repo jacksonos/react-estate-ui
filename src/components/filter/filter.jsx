@@ -33,15 +33,25 @@ function Filter() {
         </div>
         <div className="item">
           <label htmlFor="minPrice">Precio mín</label>
-          <input type="number" id="minPrice" name="minPrice" placeholder="any" />
+          <input
+            type="number"
+            id="minPrice"
+            name="minPrice"
+            placeholder="any"
+          />
         </div>
         <div className="item">
-          <label htmlFor="city">Localización</label>
-          <input type="text" id="city" placeholder="citylocation" />
+          <label htmlFor="minPrice">Precio máx</label>
+          <input
+            type="number"
+            id="maxPrice"
+            name="maxPrice"
+            placeholder="any"
+          />
         </div>
         <div className="item">
-          <label htmlFor="city">Localización</label>
-          <input type="text" id="city" placeholder="citylocation" />
+          <label htmlFor="bedroom">Bedroom</label>
+          <input type="text" id="bedroom" name="bedroom" placeholder="any" />
         </div>
         <button>
           <img src="./search.png" alt="" />
