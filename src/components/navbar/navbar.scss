@@ -1,0 +1,128 @@
+@import "../../responsive.scss";
+
+nav {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    a {
+        transition: all 0.4s ease;
+
+        @include sm {
+            display: none;
+        }
+
+        &:hover {
+            scale: 1.05;
+        }
+    }
+
+    .left {
+        flex: 3;
+        display: flex;
+        align-items: center;
+        gap: 50px;
+        font-weight: bold;
+
+        .logo {
+            font-weight: bold;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            img {
+                width: 28px;
+            }
+
+            span {
+                @include md {
+                    display: none;
+                }
+                @include sm {
+                    display: initial;
+                }
+            }
+        }
+    }
+
+    .right {
+        flex: 2;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        background-color: #fee5e2;
+        height: 100%;
+
+        @include md {
+            background-color: transparent;
+        }
+
+        a {
+            padding: 12px 24px;
+            margin: 20px;
+        }
+
+        .login {
+            border: 1px solid #ee6a59;
+            background-color: #fff;
+            color: #ee6a59;
+
+            &:hover {
+                border: 1px solid #b6301f;
+                color: #b6301f;
+            }
+        }
+
+        .register {
+            background-color: #ee6a59;
+            color: #fff;
+
+            &:hover {
+                background-color: #d93d29;
+            }
+        }
+
+        .menuIcon {
+            display: none;
+            z-index: 999;
+
+            img {
+                width: 36px;
+                height: 36px;
+                cursor: pointer;
+            }
+
+            @include sm {
+                display: inline;
+            }
+        }
+
+        .menu {
+            position: absolute;
+            top: 0;
+            right: -50%;
+            background-color: #fdd1cb;
+            color: #44120b;
+            height: 100vh;
+            width: 50%;
+            transition: all 0.4s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+
+            &.active {
+                right: 0;
+            }
+
+            @include sm {
+                a {
+                    display: initial;
+                }
+            }
+        }
+    }
+}
